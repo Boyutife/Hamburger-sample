@@ -35,12 +35,66 @@ p {
   background: transparent;
 }
 
-.menu-wrap {
+body {
+  position: relative;
+}
+
+.menu {
  visibility: hidden;
 }
 
-body {
+.menu-wrap {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 45px;
+  width: 50px;
+  /* background: var(--primary-color); */
+  z-index: 1;
+}
+
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 60px;
+  opacity: 0;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+.hamburger {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger > div,
+.hamburger > div::before,
+.hamburger > div::after {
+  position: absolute;
+  background: #fff;
+  height: 3px;
+  width: 40px;
+}
+
+.hamburger > div {
+  top: 20px;
+
+}
+
+.hamburger > div::before {
+  content: '';
+  top: -10px;
+}
+.hamburger > div::after {
+  content: '';
+  top: 10px ;
 }
 
 #showcase {
