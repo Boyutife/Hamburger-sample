@@ -1,0 +1,85 @@
+:root {
+  --primary-color: rgba(233, 237, 238, 0.778);
+  --Secondary-color: rgba(65, 181, 231, 0.45);
+  --overlay-color: rgba(63, 65, 63, 0.8);
+  --menu-speed:0.4s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  padding: 0.5rem;
+}
+
+p {
+  padding: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 5px;
+  color: rgb(5, 0, 0);
+  background: var(--primary-color) ;
+  font-size: 1rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.btn:hover{
+  cursor: pointer;
+  opacity: 0.75;
+  background: transparent;
+}
+
+.menu-wrap {
+ visibility: hidden;
+}
+
+body {
+  position: relative;
+}
+
+#showcase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: url(../img/sawyer-JvNs_UmG9Uc-unsplash.jpg) no-repeat center center/cover;
+}
+
+#showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  background: var(--Secondary-color);
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+
+
+
+
