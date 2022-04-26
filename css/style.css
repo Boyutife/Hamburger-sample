@@ -27,6 +27,7 @@ p {
   background: var(--primary-color) ;
   font-size: 1rem;
   padding: 0.5rem 0.25rem;
+  transition: all 1s ease-in-out;
 }
 
 .btn:hover{
@@ -39,9 +40,6 @@ body {
   position: relative;
 }
 
-.menu {
- visibility: hidden;
-}
 
 .menu-wrap {
   position: absolute;
@@ -59,6 +57,7 @@ input {
   left: 0;
   height: 60px;
   width: 60px;
+  z-index: 1;
   opacity: 0;
 }
 
@@ -72,6 +71,7 @@ input:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all var(--menu-speed);
 }
 
 .hamburger > div,
@@ -81,6 +81,7 @@ input:hover {
   background: #fff;
   height: 3px;
   width: 40px;
+  transition: all var(--menu-speed) ease-in-out;
 }
 
 .hamburger > div {
@@ -91,6 +92,7 @@ input:hover {
 .hamburger > div::before {
   content: '';
   top: -10px;
+
 }
 .hamburger > div::after {
   content: '';
@@ -132,6 +134,19 @@ input:hover {
   text-align: center;
   z-index: 1;
 }
+
+input:checked + .hamburger > div {
+ transform: rotate(135deg);
+}
+
+input:checked + .hamburger > div::before ,
+input:checked + .hamburger > div::after {
+  top: -1px;
+  transform: rotate(90deg);
+  /* background: aquamarine; */
+}
+
+
 
 
 
